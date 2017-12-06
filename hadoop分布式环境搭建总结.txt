@@ -1,0 +1,33 @@
+1,编辑/etc/hosts文件，详见MPI多节点配置文档
+2,配置ssh免密钥登录，详见MPI多节点配置文档
+3,下载jdk，hadoop，spark， scala等(包含在师兄给的cloud文件夹内）并解压
+4,配置环境变量：编辑主目录下.bashrc文件
+	添加以下代码：
+	#java enviroement
+	export JAVA_HOME=/home/cluster/cloud/java/jdk1.8.0_91
+	export PATH=$JAVA_HOME/bin:$PATH
+	export CLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar
+
+
+	#hadoop path
+	export HADOOP_HOME=/home/cluster/cloud/hadoop/hadoop-2.6.2
+	export PATH=$PATH:$HADOOP_HOME/bin:$HADOOP_HOME/sbin
+
+	#scala path
+	export SCALA_HOME=/home/cluster/cloud/scala/scala-2.11.8
+	export PATH=$PATH:$SCALA_HOME/bin
+
+	#spark path
+	export SPARK_HOME=/home/cluster/cloud/spark/spark-2.0.2-bin-hadoop2.6
+	export PATH=$PATH:$SPARK_HOME/bin:$SPARK_HOME/sbin
+
+5,编辑hadoop/etc/内的core-site.xml, hdfs-site.xml, mapred-site.xml, yarn-site.xml,hadoop-env.sh,yarn-env.sh文件中配置主节点域名或环境变量，在slaves 文件内配置从节点的域名
+
+6,spark配置，有待了解。。配置spark-env.sh文件设置主节点域名，在slaves文件设置从节点域名
+
+7,将配置好的jdk, spark, hadoop, scala分发到从节点的相同路径
+
+8,通过命令 hdfs namenode -format 初始化namenode
+
+9,通过start-dfs.sh 和 start-yarn.sh启动hadoop，在浏览器中输入 master(主节点名称):50070查看hadoop启动情况
+10,通过start-master.sh he start-slaves.sh 启动spark，在浏览器中输入master:8080查看spark启动情况
