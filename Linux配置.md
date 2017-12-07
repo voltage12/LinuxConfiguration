@@ -63,7 +63,7 @@ Google搜索安装教程。
     
     去[官网](https://code.visualstudio.com/)下载并安装。推荐插件"Setting Sync"，可以将你的配置用Gist保存起来，每次重新安装就不用配置了，[教程看这里](https://segmentfault.com/a/1190000010648319)。
 
-    记录下我的Gist的ID：baf933c8ca09b1ce0f1251fffbcd01e6d55e966e，f1ac912fc319a015807ae4fb581e2ee3
+    记录下我的Gist的ID：475ac77df0625f35333ecdf589833ffc9a7951df，fd143b169ed03c24439c8931b37fb70d
 12. 安装jdk
 
     [jdk下载地址](http://www.oracle.com/technetwork/java/javase/downloads/index.html)
@@ -92,7 +92,7 @@ Google搜索安装教程。
     记录下我的配置地址：
 
     ```
-	4a5e0a15599c21e021c5827090a5d6e03b807e12
+	493a3a65c0fa0cea1fff95dfe532db84c10374d1
     https://github.com/voltage12/idea_settings
     https://github.com/voltage12/clion_settings
     ```
@@ -175,6 +175,55 @@ Google搜索安装教程。
 
     [安装clang御用库libc++看此教程](http://blog.csdn.net/firebird321/article/details/48528569)
 
+# 快捷键的设置
+
+## 系统级快捷键
+
+记录下我的系统级快捷键的设置（基本上全都以Win键开头，应用程序内的快捷键避免使用Win键）：
+
+| Value        | Key       |
+| ------------- |:-------------:|
+| 激活窗口菜单    | ALt+空格 |
+| 切换全屏模式    | Win+F（ull）     |
+| 切换最大化状态 | Win+W     |
+| 关闭窗口 | Win+F4   |
+| 在左（右）侧查看分割 | Win+左（右）   |
+| 将窗口移动到工作区1,2,3 | Win+F1,F2,F3   |
+| 切换到工作区1,2,3 | Win+1,2,3   |
+| 隐藏所有窗口（显示桌面） | Win+D   |
+| 锁定屏幕 | Win+L   |
+| 显示通知列表 | Win+V   |
+| 显示所有打开的程序 | Win+S（how）   |
+| 显示所有安装的程序 | Win+A（ll）   |
+| 打开程序菜单 | Win+M   |
+| 运行程序 | Win+R（un）   |
+| 启动终端 | Win+T（erminal）   |
+| 启动浏览器 | Win+C（hrome）   |
+| 主文件夹 | Win+E   |
+| 切换应用程序 | Alt+Tab   |
+| 在所有窗口间切换 | Win+Tab   |
+| 在同一个程序的窗口间切换 | Shift+Win+Tab   |
+| 改变窗口大小 | Win+Q   |
+| 隐藏当前窗口 | Win+X  |
+| 回复窗口 | Shift+Win+X   |
+| 切换系统控制 | Win+B   |
+| 屏幕 | 15.6英寸 1920×1080   |
+| 屏幕 | 15.6英寸 1920×1080   |
+| 屏幕 | 15.6英寸 1920×1080   |
+| 屏幕 | 15.6英寸 1920×1080   |
+
+## 程序内的快捷键
+
+### guake的快捷键
+
+| Value        | Key       |
+| ------------- |:-------------:|
+| 显示guake   | Win+Z |
+| 添加新标签    | Shift+Alt+A     |
+| 关闭当前标签 | Shift+Alt+W     |
+| 标签切换 | Win+上（下）   |
+| 到第n个标签 | Ctrl+Fn   |
+
 # 系统美化
 
 美不到哪去，但还是得尝试一下。
@@ -196,6 +245,7 @@ Google搜索安装教程。
 7. Sound input
 8. User themes
 9. Workspace indecator
+10. Suspend Button
 
 ## 好看的主题
 
@@ -210,6 +260,8 @@ Google搜索安装教程。
     Thunar文件管理器可以直接配置自定义动作
 
 	`guake -n xie -e "cd %f" --show`
+
+    [或者使用 Nemo 替代 Ubuntu 自带的文件管理器](https://www.sinosky.org/set-nemo-as-the-default-file-manager-on-ubuntu.html)
 
     Nemo文件管理器在编辑->插件->操作中可以自定义动作，添加动作脚本如下
 
