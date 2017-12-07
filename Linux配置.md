@@ -253,6 +253,25 @@ Google搜索安装教程。
 
 [主题这里下载](https://pan.baidu.com/s/1eScswE2)
 
+# 用vscode写python的配置
+
+首先安装常用工具：
+
+```
+sudo apt install python3-pip
+pip3 install yapf
+pip3 install flake8
+```
+
+然后在vscode里安装python扩展，并设置：
+
+```
+"python.pythonPath": "python3",
+"python.formatting.provider": "yapf",
+"python.linting.flake8Enabled": true,
+"python.linting.pylintEnabled": false
+```
+
 # 常见问题
 
 1. 添加"在当前目录打开guake"
