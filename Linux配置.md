@@ -17,7 +17,7 @@ Google搜索安装教程。
 
     如果系统没有安装fcitx，首先得安装fcitx，执行下面的命令。
     
-    `sudo apt install fcitx-module-cloudpinyin fcitx-pinyin fcitx-table fcitx fcitx-config-gtk fcitx-config-gtk2 fcitx-frontend-all fcitx-frontend-gtk2 fcitx-frontend-gtk3 fcitx-frontend-qt4 fcitx-frontend-qt5 fcitx-libs fcitx-libs-gclient fcitx-libs-qt fcitx-libs-qt5 fcitx-module-dbus fcitx-module-kimpanel fcitx-module-lua fcitx-module-x11 fcitx-modules fcitx-tools fcitx-ui-classic fcitx-ui-qimpanel`
+    `sudo apt install fcitx-module-cloudpinyin fcitx-sunpinyin fcitx-pinyin fcitx-table fcitx fcitx-config-gtk fcitx-config-gtk2 fcitx-frontend-all fcitx-frontend-gtk2 fcitx-frontend-gtk3 fcitx-frontend-qt4 fcitx-frontend-qt5 fcitx-libs fcitx-libs-gclient fcitx-libs-qt fcitx-libs-qt5 fcitx-module-dbus fcitx-module-kimpanel fcitx-module-lua fcitx-module-x11 fcitx-modules fcitx-tools fcitx-ui-classic fcitx-ui-qimpanel`
 
     接着去搜狗官网下载搜狗输入法 For Linux并安装，安装完成建议重启系统（搜狗输入法最新版频繁崩溃，可以使用旧版）。
 
@@ -73,7 +73,7 @@ Google搜索安装教程。
     在文件尾追加：
 
     ```
-    export JAVA_HOME=/usr/lib/jvm/jdk1.8.0_91
+    export JAVA_HOME=/usr/lib/jvm/jdk1.8.0_152
     export JRE_HOME=${JAVA_HOME}/jre
     export CLASSPATH=.:${JAVA_HOME}/lib/dt.jar:${JAVA_HOME}/lib/tools.jar
     export PATH=${JAVA_HOME}/bin:$PATH
@@ -99,6 +99,22 @@ Google搜索安装教程。
 15. 安装网易云音乐
 
     [下载地址](http://music.163.com/#/download)
+16. 安装oh-my-zsh
+
+    1. `sudo apt-get install zsh`
+    2. `zsh --version`确认是否安装成功
+    3. `chsh -s $(which zsh)`设置zsh为当前用户的默认shell（不要设置为root用户的默认shell）
+    4. `sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"`安装oh-my-zsh
+    5. 编辑~/.zshrc修改主题为：agnoster
+    6. [字体下载地址](https://github.com/powerline/fonts)
+    7. 添加export DEFAULT_USER="username"到~/.zshrc
+    8. 激活对Bash的仿真`emulate bash`
+
+    优点：
+
+    1. zsh 的补全模式更方便，zsh 中按两下 tab 键可以触发 zsh 的补全，所有待补全项都可以通过键盘方向键或者 `<Ctrl-n/p/f/b>` 来选择。
+    2. zsh 支持命令选项补全，例如 `ls -<TAB><TAB> `会直接列出所有 ls 的参数
+    3. zsh 支持命令参数补全，在 zsh 下，只需要 kill 进程名`<TAB>`，zsh 就会自动补全进程的 pid
 
 # 其他可选配置
 
@@ -207,10 +223,6 @@ Google搜索安装教程。
 | 隐藏当前窗口 | Win+X  |
 | 回复窗口 | Shift+Win+X   |
 | 切换系统控制 | Win+B   |
-| 屏幕 | 15.6英寸 1920×1080   |
-| 屏幕 | 15.6英寸 1920×1080   |
-| 屏幕 | 15.6英寸 1920×1080   |
-| 屏幕 | 15.6英寸 1920×1080   |
 
 ## 程序内的快捷键
 
