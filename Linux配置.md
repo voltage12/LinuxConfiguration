@@ -17,7 +17,7 @@ Google搜索安装教程。
 
     如果系统没有安装fcitx，首先得安装fcitx，执行下面的命令。
     
-    `sudo apt install fcitx-module-cloudpinyin fcitx-sunpinyin fcitx-pinyin fcitx-table fcitx fcitx-config-gtk fcitx-config-gtk2 fcitx-frontend-all fcitx-frontend-gtk2 fcitx-frontend-gtk3 fcitx-frontend-qt4 fcitx-frontend-qt5 fcitx-libs fcitx-libs-gclient fcitx-libs-qt fcitx-libs-qt5 fcitx-module-dbus fcitx-module-kimpanel fcitx-module-lua fcitx-module-x11 fcitx-modules fcitx-tools fcitx-ui-classic fcitx-ui-qimpanel`
+    `sudo apt install fcitx-module-cloudpinyin fcitx-sunpinyin fcitx-table fcitx fcitx-config-gtk fcitx-config-gtk2 fcitx-frontend-all fcitx-frontend-gtk2 fcitx-frontend-gtk3 fcitx-frontend-qt4 fcitx-frontend-qt5 fcitx-libs fcitx-libs-gclient fcitx-libs-qt fcitx-libs-qt5 fcitx-module-dbus fcitx-module-kimpanel fcitx-module-lua fcitx-module-x11 fcitx-modules fcitx-tools fcitx-ui-classic fcitx-ui-qimpanel gir1.2-fcitx-1.0`
 
     接着去搜狗官网下载搜狗输入法 For Linux并安装，安装完成建议重启系统（搜狗输入法最新版频繁崩溃，可以使用旧版）。
 
@@ -31,9 +31,9 @@ Google搜索安装教程。
 5. 安装常用软件
 
     `sudo add-apt-repository ppa:hzwhuang/ss-qt5;sudo add-apt-repository ppa:plushuang-tw/uget-stable;sudo add-apt-repository ppa:slgobinath/uget-chrome-wrapper;sudo apt-get update;sudo apt-get install shadowsocks-qt5 uget aria2 vim uget-chrome-wrapper git guake`
-
+得到
     将guake和qt-ss设置为开机启动，在Linux Mint设置中有相关工具。
-6. 更新系统并重启
+6. 更新系统并重启ss
 
     `sudo apt update;sudo apt upgrade`
 7. 设置SS科学上网
@@ -63,7 +63,7 @@ Google搜索安装教程。
     
     去[官网](https://code.visualstudio.com/)下载并安装。推荐插件"Setting Sync"，可以将你的配置用Gist保存起来，每次重新安装就不用配置了，[教程看这里](https://segmentfault.com/a/1190000010648319)。
 
-    记录下我的Gist的ID："sync.gist": "98449765e55e048e232d5d412007feac",
+    记录下我的Gist的ID：2387bc90de8256f867a13f0d71250db1e126df9e"sync.gist": "98449765e55e048e232d5d412007feac",
 12. 安装jdk
 
     [jdk下载地址](http://www.oracle.com/technetwork/java/javase/downloads/index.html)
@@ -77,6 +77,8 @@ Google搜索安装教程。
     export JRE_HOME=${JAVA_HOME}/jre
     export CLASSPATH=.:${JAVA_HOME}/lib/dt.jar:${JAVA_HOME}/lib/tools.jar
     export PATH=${JAVA_HOME}/bin:$PATH
+    export M2_HOME=/opt/apache-maven-3.5.2
+    export PATH=${M2_HOME}/bin:$PATH
     ```
 
     使配置生效`source /etc/profile`。
@@ -317,4 +319,14 @@ pip3 install flake8
 	Reconfigure dpkg:dpkg --configure -a
 	Update apt-get:apt-get update
 	Update packages, including those improperly installed:apt-get upgrade 
+    ```
+3. apt update 出错
+
+    ```
+    sudo rm /var/lib/dpkg/lock
+    sudo rm /var/cache/apt/archives/lock
+    sudo apt clean
+    sudo rm -rf /var/lib/dpkg/updates/*
+    sudo rm -rf /var/lib/apt/lists/*
+    sudo apt update
     ```
