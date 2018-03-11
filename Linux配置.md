@@ -63,7 +63,7 @@ Google搜索安装教程。
     
     去[官网](https://code.visualstudio.com/)下载并安装。推荐插件"Setting Sync"，可以将你的配置用Gist保存起来，每次重新安装就不用配置了，[教程看这里](https://segmentfault.com/a/1190000010648319)。
 
-    记录下我的Gist的ID：557eb63e114af994bb28cad37fafcbdb78b48915
+    记录下我的Gist的ID：fec62ed88123859af8137f16f7f167fdbecaa480
 
     "sync.gist": "98449765e55e048e232d5d412007feac"
 12. 安装jdk
@@ -75,7 +75,7 @@ Google搜索安装教程。
     在文件尾追加：
 
     ```
-    export JAVA_HOME=/usr/lib/jvm/jdk1.8.0_152
+    export JAVA_HOME=/usr/lib/jvm/jdk1.8.0_151
     export JRE_HOME=${JAVA_HOME}/jre
     export CLASSPATH=.:${JAVA_HOME}/lib/dt.jar:${JAVA_HOME}/lib/tools.jar
     export PATH=${JAVA_HOME}/bin:$PATH
@@ -99,6 +99,8 @@ Google搜索安装教程。
 	25b0a890f4b5665e5fde22457fe4c2a5ab0d31ee
     https://github.com/voltage12/idea_settings
     https://github.com/voltage12/clion_settings
+    https://github.com/voltage12/pycharm_settings
+    http://jetbrains.wolfogre.com
     ```
 15. 安装网易云音乐
 

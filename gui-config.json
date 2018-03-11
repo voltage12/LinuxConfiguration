@@ -4,35 +4,35 @@
             "method": "rc4-md5",
             "password": "YCXJY1030",
             "remarks": "东京节点1",
-            "server": "45.76.51.238",
+            "server": "45.77.133.143",
             "server_port": 10510
         },
         {
             "method": "rc4-md5",
             "password": "YCXJY1030",
             "remarks": "东京节点2",
-            "server": "106.184.6.149",
+            "server": "172.104.66.162",
             "server_port": 10510
         },
         {
             "method": "rc4-md5",
             "password": "YCXJY1030",
             "remarks": "台湾节点1",
-            "server": "60.251.29.19",
+            "server": "103.98.74.38",
             "server_port": 10510
         },
         {
             "method": "rc4-md5",
             "password": "YCXJY1030",
             "remarks": "台湾节点2",
-            "server": "211.22.145.141",
+            "server": "103.98.73.108",
             "server_port": 10510
         },
         {
             "method": "rc4-md5",
             "password": "YCXJY1030",
             "remarks": "美国节点",
-            "server": "104.128.229.120",
+            "server": "202.5.16.210",
             "server_port": 10510
         },
         {
@@ -46,21 +46,21 @@
             "method": "rc4-md5",
             "password": "YCXJY1030",
             "remarks": "韩国节点1",
-            "server": "103.214.68.146",
-            "server_port": 10510
-        },
-        {
-            "method": "rc4-md5",
-            "password": "YCXJY1030",
-            "remarks": "韩国节点2",
             "server": "121.78.56.51",
             "server_port": 10510
         },
         {
             "method": "rc4-md5",
             "password": "YCXJY1030",
+            "remarks": "韩国节点2",
+            "server": "103.86.44.155",
+            "server_port": 10510
+        },
+        {
+            "method": "rc4-md5",
+            "password": "YCXJY1030",
             "remarks": "新加坡节点1",
-            "server": "116.251.211.74",
+            "server": "116.251.218.252",
             "server_port": 10510
         },
         {
