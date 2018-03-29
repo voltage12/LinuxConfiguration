@@ -31,7 +31,7 @@ Google搜索安装教程。
 5. 安装常用软件
 
     `sudo add-apt-repository ppa:hzwhuang/ss-qt5;sudo add-apt-repository ppa:plushuang-tw/uget-stable;sudo add-apt-repository ppa:slgobinath/uget-chrome-wrapper;sudo apt-get update;sudo apt-get install shadowsocks-qt5 uget aria2 vim uget-chrome-wrapper git guake`
-得到
+
     将guake和qt-ss设置为开机启动，在Linux Mint设置中有相关工具。
 6. 更新系统并重启ss
 
@@ -63,9 +63,9 @@ Google搜索安装教程。
     
     去[官网](https://code.visualstudio.com/)下载并安装。推荐插件"Setting Sync"，可以将你的配置用Gist保存起来，每次重新安装就不用配置了，[教程看这里](https://segmentfault.com/a/1190000010648319)。
 
-    记录下我的Gist的ID：557eb63e114af994bb28cad37fafcbdb78b48915
+    记录下我的Gist的ID：3c277b8533f00beb9d34149ec0944c43074f32ff
 
-    "sync.gist": "98449765e55e048e232d5d412007feac"
+    "sync.gist": "098a4daf22ee746fa0a7d5de851afc75"
 12. 安装jdk
 
     [jdk下载地址](http://www.oracle.com/technetwork/java/javase/downloads/index.html)
@@ -75,7 +75,8 @@ Google搜索安装教程。
     在文件尾追加：
 
     ```
-    export JAVA_HOME=/usr/lib/jvm/jdk1.8.0_152
+    #export JAVA_HOME=/usr/lib/jvm/jdk1.8.0_151
+    export JAVA_HOME=/opt/jdk1.8.0_162
     export JRE_HOME=${JAVA_HOME}/jre
     export CLASSPATH=.:${JAVA_HOME}/lib/dt.jar:${JAVA_HOME}/lib/tools.jar
     export PATH=${JAVA_HOME}/bin:$PATH
@@ -99,6 +100,19 @@ Google搜索安装教程。
 	25b0a890f4b5665e5fde22457fe4c2a5ab0d31ee
     https://github.com/voltage12/idea_settings
     https://github.com/voltage12/clion_settings
+    https://github.com/voltage12/pycharm_settings
+    http://jetbrains.wolfogre.com
+
+    [Desktop Entry]
+    Version=1.0
+    Type=Application
+    Name=Pycharm
+    Icon=/opt/pycharm-2017.3.2/bin/pycharm.png
+    Exec="/opt/pycharm-2017.3.2/bin/pycharm.sh" %f
+    Comment=The Drive to Develop
+    Categories=Development;IDE;
+    Terminal=false
+    StartupWMClass=jetbrains-pycharm
     ```
 15. 安装网易云音乐
 
@@ -109,7 +123,7 @@ Google搜索安装教程。
     2. `zsh --version`确认是否安装成功
     3. `chsh -s $(which zsh)`设置zsh为当前用户的默认shell（不要设置为root用户的默认shell）
     4. `sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"`安装oh-my-zsh
-    5. 编辑~/.zshrc修改主题为：agnoster
+    5. 编辑~/.zshrc修改主题为：astro
     6. [字体下载地址](https://github.com/powerline/fonts)
     7. 添加export DEFAULT_USER="username"到~/.zshrc
     8. 激活对Bash的仿真`emulate bash`
