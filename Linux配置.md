@@ -63,7 +63,7 @@ Google搜索安装教程。
     
     去[官网](https://code.visualstudio.com/)下载并安装。推荐插件"Setting Sync"，可以将你的配置用Gist保存起来，每次重新安装就不用配置了，[教程看这里](https://segmentfault.com/a/1190000010648319)。
 
-    记录下我的Gist的ID：3c277b8533f00beb9d34149ec0944c43074f32ff
+    记录下我的Gist的ID：16fd60782d7b398cbee57ef02f3b9c668e5de3b2
 
     "sync.gist": "098a4daf22ee746fa0a7d5de851afc75"
 12. 安装jdk
