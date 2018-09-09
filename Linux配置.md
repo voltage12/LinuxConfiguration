@@ -76,7 +76,6 @@ Google搜索安装教程。
 
     ```
     #export JAVA_HOME=/usr/lib/jvm/jdk1.8.0_151
-    #export JAVA_HOME=/opt/jdk1.8.0_162
     export JAVA_HOME=/usr/lib/jvm/oraclejdk
     export JRE_HOME=${JAVA_HOME}/jre
     export CLASSPATH=.:${JAVA_HOME}/lib/dt.jar:${JAVA_HOME}/lib/tools.jar

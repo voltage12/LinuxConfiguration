@@ -46,14 +46,14 @@
             "method": "rc4-md5",
             "password": "YCXJY1030",
             "remarks": "韩国节点1",
-            "server": "121.78.56.51",
+            "server": "103.86.44.155",
             "server_port": 10510
         },
         {
             "method": "rc4-md5",
             "password": "YCXJY1030",
             "remarks": "韩国节点2",
-            "server": "103.86.44.155",
+            "server": "121.78.56.51",
             "server_port": 10510
         },
         {
