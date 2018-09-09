@@ -30,7 +30,7 @@ Google搜索安装教程。
     `sudo timedatectl set-local-rtc true`
 5. 安装常用软件
 
-    `sudo add-apt-repository ppa:hzwhuang/ss-qt5;sudo add-apt-repository ppa:plushuang-tw/uget-stable;sudo add-apt-repository ppa:slgobinath/uget-chrome-wrapper;sudo apt-get update;sudo apt-get install shadowsocks-qt5 uget aria2 vim uget-chrome-wrapper git guake xclip`
+    `sudo add-apt-repository ppa:hzwhuang/ss-qt5;sudo add-apt-repository ppa:uget-team/ppa;sudo apt-get update;sudo apt-get install shadowsocks-qt5 uget aria2 vim uget-integrator git guake xclip`
 
     将guake和qt-ss设置为开机启动，在Linux Mint设置中有相关工具。
 6. 更新系统并重启ss
@@ -77,7 +77,7 @@ Google搜索安装教程。
     ```
     #export JAVA_HOME=/usr/lib/jvm/jdk1.8.0_151
     #export JAVA_HOME=/opt/jdk1.8.0_162
-	export JAVA_HOME=/usr/lib/jvm/oraclejdk
+    export JAVA_HOME=/usr/lib/jvm/oraclejdk
     export JRE_HOME=${JAVA_HOME}/jre
     export CLASSPATH=.:${JAVA_HOME}/lib/dt.jar:${JAVA_HOME}/lib/tools.jar
     export PATH=${JAVA_HOME}/bin:$PATH
@@ -98,7 +98,7 @@ Google搜索安装教程。
     记录下我的配置地址：
 
     ```
-	25b0a890f4b5665e5fde22457fe4c2a5ab0d31ee
+    7c305dca32c7204220793545496ecdb78694cfd2
     https://github.com/voltage12/idea_settings
     https://github.com/voltage12/clion_settings
     https://github.com/voltage12/pycharm_settings
