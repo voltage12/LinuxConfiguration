@@ -3,72 +3,72 @@
         {
             "method": "rc4-md5",
             "password": "YCXJY1030",
-            "remarks": "东京节点1",
-            "server": "45.77.133.143",
-            "server_port": 10510
+            "remarks": "VIP 东京节点2",
+            "server": "45.63.123.58",
+            "server_port": 13316
         },
         {
             "method": "rc4-md5",
             "password": "YCXJY1030",
-            "remarks": "东京节点2",
-            "server": "172.104.66.162",
-            "server_port": 10510
+            "remarks": "VIP 东京节点",
+            "server": "172.104.122.140",
+            "server_port": 13316
         },
         {
             "method": "rc4-md5",
             "password": "YCXJY1030",
-            "remarks": "台湾节点1",
-            "server": "103.98.74.38",
-            "server_port": 10510
+            "remarks": "VIP 台湾节点",
+            "server": "103.98.74.53",
+            "server_port": 13316
         },
         {
             "method": "rc4-md5",
             "password": "YCXJY1030",
-            "remarks": "台湾节点2",
-            "server": "103.98.73.108",
-            "server_port": 10510
+            "remarks": "VIP 台湾节点2",
+            "server": "103.98.74.54",
+            "server_port": 13316
         },
         {
             "method": "rc4-md5",
             "password": "YCXJY1030",
-            "remarks": "美国节点",
-            "server": "202.5.16.210",
-            "server_port": 10510
+            "remarks": "VIP 新加坡节点",
+            "server": "103.47.155.129",
+            "server_port": 13316
         },
         {
             "method": "rc4-md5",
             "password": "YCXJY1030",
-            "remarks": "香港节点",
-            "server": "103.192.178.193",
-            "server_port": 10510
+            "remarks": "VIP 新加坡节点2",
+            "server": "103.47.155.128",
+            "server_port": 13316
         },
         {
             "method": "rc4-md5",
             "password": "YCXJY1030",
-            "remarks": "韩国节点1",
-            "server": "103.86.44.155",
-            "server_port": 10510
+            "remarks": "VIP 香港节点",
+            "server": "103.27.77.109",
+            "server_port": 13316
         },
         {
             "method": "rc4-md5",
             "password": "YCXJY1030",
-            "remarks": "韩国节点2",
-            "server": "121.78.56.51",
-            "server_port": 10510
+            "remarks": "VIP 美国节点",
+            "server": "162.245.223.136",
+            "server_port": 13316
         },
         {
             "method": "rc4-md5",
             "password": "YCXJY1030",
-            "remarks": "新加坡节点1",
-            "server": "116.251.218.252",
-            "server_port": 10510
+            "remarks": "VIP 韩国节点",
+            "server": "103.214.68.152",
+            "server_port": 13316
         },
         {
             "method": "rc4-md5",
             "password": "YCXJY1030",
-            "remarks": "新加坡节点2",
-            "server": "116.251.219.209",
-            "server_port": 10510
+            "remarks": "VIP 韩国节点2",
+            "server": "103.86.44.17",
+            "server_port": 13316
         }
     ],
     "localPort": 1080,

@@ -1,44 +1,80 @@
 # linux发行版的选择
 
-推荐Linux Mint，但是不要选择KDE桌面版，另外Ubuntu16.04也行。
-
-# linux的安装
-
-Google搜索安装教程。
+Linux Mint or manjaro
 
 # linux的设置和安装常用软件
 
 1. 更新软件源
 
-    Linux Mint和Ubuntu中都有图形化界面可以配置软件源，手动配置方法参考下面链接。
+    * ubuntu
 
-    [ubuntu16.04LTS更换阿里源](https://www.cnblogs.com/mufire/p/6433757.html)
+        Linux Mint和Ubuntu中都有图形化界面可以配置软件源，手动配置方法参考下面链接。
+
+        [ubuntu16.04LTS更换阿里源](https://www.cnblogs.com/mufire/p/6433757.html)
+    * manjaro
+    
+        生成可用中国镜像站列表：`sudo pacman-mirrors -i -c China -m rank`
+
+        最后刷新缓存：`sudo pacman -Syy`
+
+        在/etc/pacman.conf文件末尾添加以下两行：
+
+        ```
+        [archlinuxcn]
+        Server = https://mirrors.shu.edu.cn/archlinuxcn/$arch
+        ```
+
+        之后安装archlinux-keyring包导入GPG key：`sudo pacman -Syy && sudo pacman -S archlinuxcn-keyring`
+
+        如果失败的话
+
+        ```
+        pacman -Syu haveged
+        systemctl start haveged
+        systemctl enable haveged
+        rm -rf /etc/pacman.d/gnupg
+        pacman-key --init
+        pacman-key --populate manjaro
+        pacman-key --populate archlinuxcn
+        ```
 2. 安装中文输入法
 
-    如果系统没有安装fcitx，首先得安装fcitx，执行下面的命令。
+    卸载ibus，安装fcitx，执行一下命令(ubuntu18.04不适用，许多软件包改名)。
     
     `sudo apt install fcitx-module-cloudpinyin fcitx-sunpinyin fcitx-table fcitx fcitx-config-gtk fcitx-config-gtk2 fcitx-frontend-all fcitx-frontend-gtk2 fcitx-frontend-gtk3 fcitx-frontend-qt4 fcitx-frontend-qt5 fcitx-libs fcitx-libs-gclient fcitx-libs-qt fcitx-libs-qt5 fcitx-module-dbus fcitx-module-kimpanel fcitx-module-lua fcitx-module-x11 fcitx-modules fcitx-tools fcitx-ui-classic fcitx-ui-qimpanel gir1.2-fcitx-1.0`
 
-    接着去搜狗官网下载搜狗输入法 For Linux并安装，安装完成建议重启系统（搜狗输入法最新版频繁崩溃，可以使用旧版）。
+    搜狗官网下载搜狗输入法 For Linux并安装，安装完成重启系统。
 
-    如果没有输入法切换工具可以安装im-config
+    没有输入法切换工具可以安装im-config
+
+    如果是manjaro的话
+
+    ```
+    sudo pacman -S fcitx-sogoupinyin
+    sudo pacman -S fcitx-im # 全部安装
+    sudo pacman -S fcitx-configtool # 图形化配置工具
+
+    之后就是还需要更改 ~/.xprofile
+
+    export GTK_IM_MODULE=fcitx
+    export QT_IM_MODULE=fcitx
+    export XMODIFIERS="@im=fcitx"
+    ```
 3. 安装额外驱动
 
-    如果需要安装显卡驱动可以Google教程。
+    NVIDIA显卡或ADM显卡可安装闭源驱动。
 4. 解决时间不一致问题
 
     `sudo timedatectl set-local-rtc true`
-5. 安装常用软件
+5. 安装必要软件
 
     `sudo add-apt-repository ppa:hzwhuang/ss-qt5;sudo add-apt-repository ppa:uget-team/ppa;sudo apt-get update;sudo apt-get install shadowsocks-qt5 uget aria2 vim uget-integrator git guake xclip`
-
-    将guake和qt-ss设置为开机启动，在Linux Mint设置中有相关工具。
-6. 更新系统并重启ss
+6. 更新系统并重启
 
     `sudo apt update;sudo apt upgrade`
 7. 设置SS科学上网
 
-    找一个pac文件，将地址和端口设为127.0.0.1和1080，然后在系统设置中的网络设置中开启全局代理，然后在qt-ss中设置节点并监听1080端口。
+    使用genpac生成pac文件，将地址和端口设为127.0.0.1和1080，然后在系统设置中的网络设置中开启全局代理。
 8. 安装gnu开发工具集和opengl开发库
 
     `sudo apt-get install build-essential libgl1-mesa-dev gcc gdb`
@@ -59,8 +95,6 @@ Google搜索安装教程。
     去[官网](https://chrome.google.com/)下载并安装或者安装chromium浏览器`sudo apt-get install chromium-browser`。
 11. 安装vscode
 
-    编辑器推荐vscode，atom也可但比vscode慢一点，如果你觉得两个都很卡，建议换电脑。
-    
     去[官网](https://code.visualstudio.com/)下载并安装。推荐插件"Setting Sync"，可以将你的配置用Gist保存起来，每次重新安装就不用配置了，[教程看这里](https://segmentfault.com/a/1190000010648319)。
 
     记录下我的Gist的ID：16fd60782d7b398cbee57ef02f3b9c668e5de3b2
@@ -93,8 +127,6 @@ Google搜索安装教程。
     学生可以免费用，可以百度破解教程。[官网](http://www.jetbrains.com/idea/?fromMenu)
 
     这些软件的配置可以上传到github，这样每次重装就不会特别麻烦。
-
-    记录下我的配置地址：
 
     ```
     7c305dca32c7204220793545496ecdb78694cfd2
