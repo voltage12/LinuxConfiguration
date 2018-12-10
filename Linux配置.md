@@ -1,11 +1,3 @@
-# linux发行版的选择
-
-推荐Linux Mint，但是不要选择KDE桌面版，另外Ubuntu16.04也行。
-
-# linux的安装
-
-Google搜索安装教程。
-
 # linux的设置和安装常用软件
 
 1. 更新软件源
@@ -15,25 +7,21 @@ Google搜索安装教程。
     [ubuntu16.04LTS更换阿里源](https://www.cnblogs.com/mufire/p/6433757.html)
 2. 安装中文输入法
 
-    如果系统没有安装fcitx，首先得安装fcitx，执行下面的命令。
+    安装fcitx（在ubuntu18中很多包名字改了）
     
     `sudo apt install fcitx-module-cloudpinyin fcitx-sunpinyin fcitx-table fcitx fcitx-config-gtk fcitx-config-gtk2 fcitx-frontend-all fcitx-frontend-gtk2 fcitx-frontend-gtk3 fcitx-frontend-qt4 fcitx-frontend-qt5 fcitx-libs fcitx-libs-gclient fcitx-libs-qt fcitx-libs-qt5 fcitx-module-dbus fcitx-module-kimpanel fcitx-module-lua fcitx-module-x11 fcitx-modules fcitx-tools fcitx-ui-classic fcitx-ui-qimpanel gir1.2-fcitx-1.0`
-
-    接着去搜狗官网下载搜狗输入法 For Linux并安装，安装完成建议重启系统（搜狗输入法最新版频繁崩溃，可以使用旧版）。
 
     如果没有输入法切换工具可以安装im-config
 3. 安装额外驱动
 
-    如果需要安装显卡驱动可以Google教程。
+    NVIDIA显卡安装闭源驱动
 4. 解决时间不一致问题
 
     `sudo timedatectl set-local-rtc true`
 5. 安装常用软件
 
-    `sudo add-apt-repository ppa:hzwhuang/ss-qt5;sudo add-apt-repository ppa:plushuang-tw/uget-stable;sudo add-apt-repository ppa:slgobinath/uget-chrome-wrapper;sudo apt-get update;sudo apt-get install shadowsocks-qt5 uget aria2 vim uget-chrome-wrapper git guake xclip`
-
-    将guake和qt-ss设置为开机启动，在Linux Mint设置中有相关工具。
-6. 更新系统并重启ss
+    `sudo add-apt-repository ppa:hzwhuang/ss-qt5;sudo add-apt-repository ppa:uget-team/ppa;sudo apt-get update;sudo apt-get install shadowsocks-qt5 uget aria2 vim uget-integrator git guake xclip`
+6. 更新系统并重启
 
     `sudo apt update;sudo apt upgrade`
 7. 设置SS科学上网
@@ -46,7 +34,7 @@ Google搜索安装教程。
 
     推荐Monaco和微软雅黑的混合字体，[下载链接](https://pan.baidu.com/s/1hsaSwBU)，双击即可安装。
 
-    手动安装方法：
+    手动安装字体方法：
     
     ```
     sudo mkfontscale
@@ -59,13 +47,9 @@ Google搜索安装教程。
     去[官网](https://chrome.google.com/)下载并安装或者安装chromium浏览器`sudo apt-get install chromium-browser`。
 11. 安装vscode
 
-    编辑器推荐vscode，atom也可但比vscode慢一点，如果你觉得两个都很卡，建议换电脑。
-    
     去[官网](https://code.visualstudio.com/)下载并安装。推荐插件"Setting Sync"，可以将你的配置用Gist保存起来，每次重新安装就不用配置了，[教程看这里](https://segmentfault.com/a/1190000010648319)。
 
     记录下我的Gist的ID：16fd60782d7b398cbee57ef02f3b9c668e5de3b2
-
-    "sync.gist": "098a4daf22ee746fa0a7d5de851afc75"
 12. 安装jdk
 
     [jdk下载地址](http://www.oracle.com/technetwork/java/javase/downloads/index.html)
@@ -77,7 +61,7 @@ Google搜索安装教程。
     ```
     #export JAVA_HOME=/usr/lib/jvm/jdk1.8.0_151
     #export JAVA_HOME=/opt/jdk1.8.0_162
-	export JAVA_HOME=/usr/lib/jvm/oraclejdk
+    export JAVA_HOME=/usr/lib/jvm/oraclejdk
     export JRE_HOME=${JAVA_HOME}/jre
     export CLASSPATH=.:${JAVA_HOME}/lib/dt.jar:${JAVA_HOME}/lib/tools.jar
     export PATH=${JAVA_HOME}/bin:$PATH
@@ -98,11 +82,11 @@ Google搜索安装教程。
     记录下我的配置地址：
 
     ```
-	25b0a890f4b5665e5fde22457fe4c2a5ab0d31ee
+    25b0a890f4b5665e5fde22457fe4c2a5ab0d31ee
     https://github.com/voltage12/idea_settings
     https://github.com/voltage12/clion_settings
     https://github.com/voltage12/pycharm_settings
-    http://jetbrains.wolfogre.com
+    http://jetbrains.wolfogre.comz
 
     [Desktop Entry]
     Version=1.0
@@ -347,3 +331,31 @@ pip3 install flake8
     sudo rm -rf /var/lib/apt/lists/*
     sudo apt update
     ```
+
+## 修改输入法框架
+
+```
+之后就是还需要更改 ~/.xprofile
+
+export GTK_IM_MODULE=fcitx
+export QT_IM_MODULE=fcitx
+export XMODIFIERS="@im=fcitx"
+```
+
+
+## 启动sshd服务
+
+```
+查看状态：
+
+systemctl status sshd.service
+启动服务：
+
+systemctl start sshd.service
+重启服务：
+
+systemctl restart sshd.service
+开机自启：
+
+systemctl enable sshd.service
+```

@@ -1,74 +1,11 @@
 {
     "configs": [
         {
-            "method": "rc4-md5",
-            "password": "YCXJY1030",
-            "remarks": "东京节点1",
-            "server": "45.77.133.143",
-            "server_port": 10510
-        },
-        {
-            "method": "rc4-md5",
-            "password": "YCXJY1030",
-            "remarks": "东京节点2",
-            "server": "172.104.66.162",
-            "server_port": 10510
-        },
-        {
-            "method": "rc4-md5",
-            "password": "YCXJY1030",
-            "remarks": "台湾节点1",
-            "server": "103.98.74.38",
-            "server_port": 10510
-        },
-        {
-            "method": "rc4-md5",
-            "password": "YCXJY1030",
-            "remarks": "台湾节点2",
-            "server": "103.98.73.108",
-            "server_port": 10510
-        },
-        {
-            "method": "rc4-md5",
-            "password": "YCXJY1030",
-            "remarks": "美国节点",
-            "server": "202.5.16.210",
-            "server_port": 10510
-        },
-        {
-            "method": "rc4-md5",
-            "password": "YCXJY1030",
-            "remarks": "香港节点",
-            "server": "103.192.178.193",
-            "server_port": 10510
-        },
-        {
-            "method": "rc4-md5",
-            "password": "YCXJY1030",
-            "remarks": "韩国节点1",
-            "server": "121.78.56.51",
-            "server_port": 10510
-        },
-        {
-            "method": "rc4-md5",
-            "password": "YCXJY1030",
-            "remarks": "韩国节点2",
-            "server": "103.86.44.155",
-            "server_port": 10510
-        },
-        {
-            "method": "rc4-md5",
-            "password": "YCXJY1030",
-            "remarks": "新加坡节点1",
-            "server": "116.251.218.252",
-            "server_port": 10510
-        },
-        {
-            "method": "rc4-md5",
-            "password": "YCXJY1030",
-            "remarks": "新加坡节点2",
-            "server": "116.251.219.209",
-            "server_port": 10510
+            "method": "aes-128-cfb",
+            "password": "Xiejy951",
+            "remarks": "Myss2",
+            "server": "95.179.203.60",
+            "server_port": 1080
         }
     ],
     "localPort": 1080,
